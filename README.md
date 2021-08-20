@@ -29,14 +29,40 @@ Front End application using [React.js](https://reactjs.org/) for UI, [Next.js](h
 
 ## Dev Setup
 
-1. Install dependencies
+1. Set up environment variables
+
+From your contentful space, go to **Settings > API keys**. There will be an example Content delivery / preview token - you can use these API keys. (You may also create a new key.)
+
+Next, copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
+
+```bash
+cp .env.local.example .env.local
+```
+
+Then set each variable on `.env.local`:
+
+- `CONTENTFUL_SPACE_ID` should be the **Space ID** field of your API Key
+- `CONTENTFUL_ACCESS_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) - access token** field of your API key
+- `CONTENTFUL_PREVIEW_ACCESS_TOKEN` should be the **[Content Preview API](https://www.contentful.com/developers/docs/references/content-preview-api/) - access token** field of your API key
+- `CONTENTFUL_PREVIEW_SECRET` should be any value you want. It must be URL friendly as the dashboard will send it as a query parameter to enable preview mode
+
+Your `.env.local` file should look like this:
+
+```bash
+CONTENTFUL_SPACE_ID=...
+CONTENTFUL_ACCESS_TOKEN=...
+CONTENTFUL_PREVIEW_ACCESS_TOKEN=...
+CONTENTFUL_PREVIEW_SECRET=...
+```
+
+2. Install dependencies and run Next.js in development mode
 
 ```
 yarn install
 yarn dev
 ```
 
-2. Go to [http://localhost:3000](http://localhost:3000)
+3. Go to [http://localhost:3000](http://localhost:3000)
 
 ## View deployed production application
 
