@@ -4,12 +4,13 @@
 
 ## David Choi's Solution
 
-Front End application using React.js for UI, Next.js for SSR and setup, Styled Components for CSS in JS consuming data from Contentful
+Front End application using [React.js](https://reactjs.org/) for UI, [Next.js](https://nextjs.com/) for SSR and setup, [Styled Components](https://styled-components.com/) for CSS in JS consuming data from [Contentful](https://contentful.com/), deployed through [Vercel](https://vercel.com/)
 
 - Copied the style and content from lyft.com
 - Created my own React Components writing CSS with Styled Components
-- Used Next.js to help with SSR, routing, image optimization, and everything to set up my project quickly.
+- Used Next.js for routing, image optimization, and everything else to help get my project production ready quickly
 - Pulled content data from GraphQL Contentful API at `https://graphql.contentful.com/content/v1/spaces/{SPACE_ID}/explore?access_token={CDA_TOKEN}`
+- Deployment through Vercel using environment variables, preview & production deployments
 - Mobile and Desktop friendly
 
 <!-- ## To Do
@@ -21,7 +22,7 @@ Front End application using React.js for UI, Next.js for SSR and setup, Styled C
 
 ## Lighthouse Score
 
-![Lighthouse Score Screenshot](./docs/content-model-overview.jpg)
+![Lighthouse Score Screenshot](./docs/lighthouse-scores.png)
 
 ## Dev Setup
 
