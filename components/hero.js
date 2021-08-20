@@ -56,6 +56,8 @@ const HeroStyles = styled.section`
 
 export default function Hero() {
 	const { email } = davidschoi;
+	const subject = `Greetings David`;
+	const body = `I hope you enjoyed your interview with Lyft!`;
 
 	return (
 		<HeroStyles>
@@ -71,7 +73,7 @@ export default function Hero() {
 						<LinkButton type="primary" href="/dchoi-resume.pdf" target="_blank">
 							Resume
 						</LinkButton>
-						<LinkButton href={`mailto:${email}?subject=Greetings David!&body=Wow great website. I hope you enjoyed your interview with Lyft!`} type="button" target="_blank" rel="noreferrer">
+						<LinkButton href={`mailto:${email}?subject=${subject}!&body=${body}`} type="button" target="_blank" rel="noreferrer">
 							Email
 						</LinkButton>
 					</div>
