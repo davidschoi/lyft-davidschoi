@@ -70,7 +70,7 @@ function Value({ image, title, description }) {
 	return (
 		<ValueStyles>
 			<div className="image-wrapper">
-				<Image src={image?.url} height={140} width={140} />
+				<Image src={image?.url} alt={`${title} image`} height={140} width={140} />
 			</div>
 			<div className="content">
 				<Text type="title" className="title">

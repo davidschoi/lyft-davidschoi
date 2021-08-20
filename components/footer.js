@@ -73,17 +73,17 @@ export default function Footer() {
 				<div className="flex-col">
 					<ul>
 						<li>
-							<LinkButton href={website} type="button" target="_blank">
+							<LinkButton href={website} type="button" target="_blank" rel="noreferrer">
 								davidschoi.com
 							</LinkButton>
 						</li>
 						<li>
-							<LinkButton href={linkedin} type="button" target="_blank">
+							<LinkButton href={linkedin} type="button" target="_blank" rel="noreferrer">
 								LinkedIn
 							</LinkButton>
 						</li>
 						<li>
-							<LinkButton href={github} type="button" target="_blank">
+							<LinkButton href={github} type="button" target="_blank" rel="noreferrer">
 								GitHub
 							</LinkButton>
 						</li>

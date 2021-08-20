@@ -71,13 +71,13 @@ export default function Hero() {
 						<LinkButton type="primary" href="/dchoi-resume.pdf" target="_blank">
 							Resume
 						</LinkButton>
-						<LinkButton href={`mailto:${email}?subject=Greetings David!&body=Wow great website. I hope you enjoyed your interview with Lyft!`} type="button" target="_blank">
+						<LinkButton href={`mailto:${email}?subject=Greetings David!&body=Wow great website. I hope you enjoyed your interview with Lyft!`} type="button" target="_blank" rel="noreferrer">
 							Email
 						</LinkButton>
 					</div>
 				</div>
 				<div className="flex-col image-wrapper">
-					<Image src="/images/life-at-lyft.jpeg" width={400} height={300} />
+					<Image src="/images/life-at-lyft.jpeg" alt="Life at Lyft" width={400} height={300} />
 				</div>
 			</Container>
 		</HeroStyles>

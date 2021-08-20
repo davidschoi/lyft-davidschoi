@@ -62,7 +62,7 @@ export default function Section(props) {
 		<SectionStyles {...props}>
 			<Container>
 				<div className="flex-col image-wrapper">
-					<Image src="/images/me.jpeg" width={250} height={250} />
+					<Image src="/images/me.jpeg" alt={`${first} ${last} picture`} width={250} height={250} />
 				</div>
 				<div className="flex-col content">
 					<Text type="title" className="title">
