@@ -10,6 +10,10 @@ const ValuesStyles = styled.section`
 	.subheader {
 		margin-bottom: 24px;
 	}
+
+	p {
+		margin-bottom: 40px;
+	}
 `;
 
 const ValueStyles = styled.div`

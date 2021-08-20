@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import davidschoi from 'davidschoi';
 import Text from './text';
 import LinkButton from './link-button';
+import IconRides from '../public/images/icon-rides.svg';
+import IconRating from '../public/images/icon-rating.svg';
+import IconCar from '../public/images/icon-car.svg';
 
 const FooterStyles = styled.footer`
 	background: linear-gradient(rgb(231, 231, 239) 0%, rgb(244, 244, 250) 5%, rgb(255, 255, 255) 10%);
@@ -26,6 +29,16 @@ const FooterStyles = styled.footer`
 
 				li {
 					margin-bottom: 8px;
+					min-height: 32px;
+
+					&.flex {
+						display: flex;
+						align-items: center;
+					}
+
+					svg {
+						margin-right: 8px;
+					}
 				}
 			}
 		}
@@ -46,10 +59,19 @@ export default function Footer() {
 	const { website, linkedin, github, name } = davidschoi;
 	const { first, last } = name;
 	const FOOTER_CONTENT = [
-		{ id: 1, header: 'Driver', children: [`I think I'm a great driver`, `My wife might say otherwise`, `My dog might say it's ruff`] },
-		{ id: 2, header: 'Rider', children: [`233 Rides`, `5.0 Rating`, `8.2 Years`] },
+		{ id: 1, header: 'Driver', children: [`I think I'm a great driver`, `My wife would say otherwise`, `My dog might think it's ruff`] },
+		{
+			id: 2,
+			header: 'Rider',
+			children: [
+				{ content: `233 Rides`, icon: <IconRides /> },
+				{ content: `5.0 Rating`, icon: <IconRating /> },
+				{ content: `${new Date().getFullYear() - 2013} Years`, icon: <IconCar /> },
+			],
+		},
 		{ id: 3, header: 'Lyft', children: [`${first} ${last}`, `Front End Engineer`, `United States`] },
 	];
+
 	return (
 		<FooterStyles>
 			<div className="container">
@@ -62,8 +84,15 @@ export default function Footer() {
 							</Text>
 							<ul>
 								{children.map((child, i) => (
-									<li key={`${id}-children-${i}`}>
-										<Text>{child}</Text>
+									<li key={`${id}-children-${i}`} className="flex">
+										{typeof child === 'string' ? (
+											<Text>{child}</Text>
+										) : (
+											<>
+												{child.icon}
+												<Text>{child.content}</Text>
+											</>
+										)}
 									</li>
 								))}
 							</ul>

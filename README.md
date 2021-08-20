@@ -13,12 +13,15 @@ Front End application using [React.js](https://reactjs.org/) for UI, [Next.js](h
 - Deployment through Vercel using environment variables, preview & production deployments
 - Mobile and Desktop friendly
 
-<!-- ## To Do
+<!--
+## To Do
 
-- Bring all content into Contentful
+- Bring more content into Contentful
 - Create dynamic Page Content Model for Header, Content, and Footer
-- More reusable components
-- Utilities and helper functions to handle business logic -->
+- Take advantage of theming for styles or perhaps upgrade to Chakra UI
+- Build out reusable components
+- Utilities and helper functions to handle business logic
+-->
 
 ## Lighthouse Score
 
